@@ -31,7 +31,7 @@ namespace BankApp.Model
             if (amount < 0) throw new ArgumentException("Amount cannot be negative");
             else
             {
-                balance += amount;
+                Balance += amount;
             }
         }
         public virtual void WithDraw(decimal amount)
@@ -39,7 +39,7 @@ namespace BankApp.Model
             if (amount < 0) throw new ArgumentException("Amount cannot be negative");
             else
             {
-                balance -= amount;
+                Balance -= amount;
                 Console.WriteLine($"{amount:C} deposited. New balance: {balance:C}");
             }
         }

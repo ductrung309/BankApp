@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankApp.Model
 {
-    internal class SavingAccount : BankAccount
+    public class SavingAccount : BankAccount
     {
         private decimal InterestRate;
         public SavingAccount(string AccountNumber, decimal Balance, decimal InterestRate):base(AccountNumber, Balance)
@@ -26,7 +26,7 @@ namespace BankApp.Model
         {
             decimal interest = balance * InterestRate / 100;
             Deposit(interest);
-            Console.WriteLine($"Monthly interest of {interest:C} applied. New balance: {Balance:C}");
+            Console.WriteLine($"Monthly interest of {interest:C} applied. New balance: {balance:C}");
         }
     }
 }
